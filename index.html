@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>MONEY FORMAT</title>
+	</head>                
+	<body> 
+		<div>
+			<p><input type="text" id="input" /><input type="button" value="click" id="button"/></p>
+			<p><span id="formatted">000.00</span></p>
+		</div>                                                                              
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script> 
+		<script type="text/javascript" src="./money.jquery.js"></script> 
+		<script type="text/javascript">
+			(function($){
+				$('#button').click(function(){
+					$('#formatted').html($.money($('#input').val()));
+				});
+			})(jQuery);
+		</script>
+	</body>
+</html>
